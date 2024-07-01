@@ -6,8 +6,9 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
+    "types": ["node", "jest"],
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "bundler", 
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,9 +19,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["components/*"]
+    },
+  
+    "baseUrl": "./",
+
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "__tests__/useScroll.test.tsx"],
   "exclude": ["node_modules"]
 }
